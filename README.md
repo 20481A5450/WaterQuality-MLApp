@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```bash
 settings.py
 ```
-4. Refer the database.txt file and create the tables accordingly & Run migrations:
+4. Refer the DB.txt file and create the tables accordingly & Run migrations:
 ```bash
 python manage.py migrate
 ```
