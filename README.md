@@ -13,12 +13,24 @@ This project aims to develop a machine learning application for water quality an
 ## Installation
 1. Clone the repository: 
 ```bash
-git clone https://github.com/your-username/water-quality-app.git
+git clone https://github.com/20481A5450/WaterQuality-MLApp.git
 ```
-3. Install dependencies: ```bash pip install -r requirements.txt```
-4. Set up MySQL database and configure the settings in ```bash settings.py```
-5. Run migrations: ```bash python manage.py migrate```
-6. Start the development server: ```bash python manage.py runserver```
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+3. Set up MySQL database and configure the settings in
+```bash
+settings.py
+```
+4. Refer the database.txt file and create the tables accordingly & Run migrations:
+```bash
+python manage.py migrate
+```
+5. Start the development server:
+```bash
+run.bat
+```
 
 ## Usage
 1. Upload Water Quality Data: Import water quality data into the application.
