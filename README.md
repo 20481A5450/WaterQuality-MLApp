@@ -5,10 +5,11 @@ This project aims to develop a machine learning application for water quality an
 
 ## Table of Contents
 1. [Features](#Features)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Contributing](#contributing)
-5. [Acknowledgements](#acknowledgements)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [Acknowledgements](#acknowledgements)
 
 ## Features
 - Data Preprocessing: The application preprocesses raw water quality data, including handling missing values and scaling features.
@@ -18,13 +19,26 @@ This project aims to develop a machine learning application for water quality an
 - Google Sheets Integration: The application integrates with the Google Sheets API to facilitate data import/export and collaboration.
 - Email Updates: The Water Quality Reports arre sent via email address given when registering to your account
 
+## Pre-requisites
+- Python version - `3.9.0`
+- Mysql version - `8`
+- Google sheets api - follow this tutorial along to get Google sheets api
+```bash 
+https://youtu.be/P16uA1Hl4DI?si=yhVFReLNcDGe7_rC
+```
+- Sheet ID - Create a new google sheet 
+https://docs.google.com/spreadsheets/d/abc1234567/edit#gid=0 is "abc1234567".
+- Mail Setup -follow this tutorial along to get App password
+```bash 
+https://youtu.be/hXiPshHn9Pw?si=snMjPPynOttla-UF
+```
+
 ## Installation
 1. Clone the repository: 
 ```bash
 git clone https://github.com/20481A5450/WaterQuality-MLApp.git
 ```
 2. Install dependencies:
-this is developed in python:` 3.9.0`
 ```bash
 pip install -r requirements.txt
 ```
