@@ -39,6 +39,7 @@ run.bat
 3. Train Models: Train machine learning models using different algorithms.
 4. Evaluate Models: Evaluate the performance of trained models using various evaluation metrics.
 5. Visualize Data: Visualize water quality data to gain insights and identify patterns.
+6. Email Updates: Water quality reports are sent to the registered email address.
 
 ## Contributing
 Contributions are welcome! Feel free to open issues for bug fixes, feature requests, or any improvements you'd like to propose.
