@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home</title>
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <style>
+        .data{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            background-color: #f8f9fa;
+        }
+        .input{
+            display: flex;
+            padding: 0 0 35px 0;
+        }
+        .btn{
+            padding: 0 -30px 0 -30px;
+        }
+        .excel{
+            align-items: bottom;
+        }
+        .csv{
+            padding: 20px 150px 20px 150px;
+            align-items: center;
+        }
+        .tableheader{
+            text-decoration-color: whitesmoke;
+            text-align: center;
+        }
+        .tabledata{
+            text-align: center;    
+        }
+        .tr{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="UserScreen.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fa-solid fa-home"></i>&nbsp;Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'ProcessData' %}">Load & Preprocess Dataset</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'TrainLSTM' %}">Run LSTM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'TrainRF' %}">Run RF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Predict' %}">Predict and Forecast</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Feedback' %}">Feedback</a>
+                </li>
+            </ul>
+            <!-- Logout Form -->
+            <form method="post" action="{% url 'UserLogin' %}">
+                {% csrf_token %}
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+            </form>
+        </div>
+    </nav>
+    <div class="data">
+        <div class="form-group">
+            <form name="f1" method="post" action="{% url 'ProcessData' %}" enctype="multipart/form-data" >
+                {% csrf_token %}<br/>
+                <label for="formFileLg" class="form-label">Choose Dataset</label>&nbsp;
+                <table>
+                    <tr>
+                        <!-- <td>
+                            <label for="formFileLg" class="form-label">Choose Dataset</label>
+                        </td> -->
+                        <td>
+                            <input class="form-control form-control-sm mr-2"name="file" id="file" type="file" style="margin-right: 20px;">
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary" id="btn">Upload</button>
+                        </td>
+                    </tr>
+                </table>  
+        </div> 
+    </div>
+    <div class="csv">
+        {% for msg in messages %}
+						<div class="alert alert-success" role="alert">
+							<h4 class="alert-heading">Well done!</h4>
+							<p>{{msg}}<hr>
+						</div>
+				{% endfor %}
+        </center><font size="3" color="red"><center>{{ data|safe }}</center></font>  
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
