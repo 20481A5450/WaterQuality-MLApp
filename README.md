@@ -5,7 +5,7 @@ This project aims to develop a machine learning application for water quality an
 
 ## Table of Contents
 1. [Features](#Features)
-2. [Prerequisites](#prerequisites)
+2. [Pre-requisites](#pre-requisites)
 3. [Installation](#installation)
 4. [Usage](#usage)
 5. [Contributing](#contributing)
