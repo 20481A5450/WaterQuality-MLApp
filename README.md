@@ -65,6 +65,7 @@ run.bat
 
 ## Contributing
 Contributions are welcome! Feel free to open issues for bug fixes, feature requests, or any improvements you'd like to propose.
+Feel Free to raise an issue if you face any difficulty in any phase.
 
 ## Acknowledgements
 - Thanks to the contributors who have helped in developing and testing this application.
