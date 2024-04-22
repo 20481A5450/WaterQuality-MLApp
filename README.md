@@ -24,6 +24,7 @@ This project aims to develop a machine learning application for water quality an
 git clone https://github.com/20481A5450/WaterQuality-MLApp.git
 ```
 2. Install dependencies:
+this is developed in python:` 3.9.0`
 ```bash
 pip install -r requirements.txt
 ```
