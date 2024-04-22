@@ -7,7 +7,8 @@ This project aims to develop a machine learning application for water quality an
 - Data Preprocessing: The application preprocesses raw water quality data, including handling missing values and scaling features.
 - Model Training: It trains machine learning models using various algorithms such as LSTM (Long Short-Term Memory) and others to predict water quality.
 - Evaluation Metrics: The application provides evaluation metrics such as accuracy, precision, recall, and F1-score to assess the performance of trained models.
-- Data Visualization: It offers visualizations of water quality data using libraries like Matplotlib and Seaborn to gain insights into the dataset.
+- Data Visualization: It offers visualizations of water quality data using libraries like Matplotlib and Seaborn to gain insights into the dataset stores the gerenated plots in a folder called plots with the timestamp.
+- 
 - Google Sheets Integration: The application integrates with the Google Sheets API to facilitate data import/export and collaboration.
 
 ## Installation
