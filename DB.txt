@@ -9,4 +9,15 @@ gender varchar(20),
 email varchar(50),
 address varchar(50));
 
+CREATE TABLE feedback2 (
+  user_id int DEFAULT NULL,
+  feedback text,
+  created_at text
+);
+
+CREATE TABLE filesupload (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    file VARCHAR(255) NOT NULL
+);
+
 
