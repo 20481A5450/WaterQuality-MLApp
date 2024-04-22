@@ -3,6 +3,13 @@
 ## Overview
 This project aims to develop a machine learning application for water quality analysis. The application utilizes various machine learning algorithms to predict water quality based on input parameters such as pH level, dissolved oxygen, and turbidity. It also includes features for data visualization, model training, and evaluation.
 
+## Table of Contents
+1. [Features](#Features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [Acknowledgements](#acknowledgements)
+
 ## Features
 - Data Preprocessing: The application preprocesses raw water quality data, including handling missing values and scaling features.
 - Model Training: It trains machine learning models using various algorithms such as LSTM (Long Short-Term Memory) and others to predict water quality.
